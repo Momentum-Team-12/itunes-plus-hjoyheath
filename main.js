@@ -32,7 +32,7 @@ fetch("https://itunes.apple.com/search?term=TOOL&media=music", {
       siteDiv.appendChild(previewDiv);
 
       let imageEl = document.createElement("img");
-      imageEl.src = i.artworkUrl100;
+      imageEl.src = i.artworkUrl60;
       siteDiv.appendChild(imageEl);
     }
   });
