@@ -13,26 +13,31 @@ fetch("https://itunes.apple.com/search?term=TOOL&media=music", {
 
     for (let i of data.results) {
       console.log(i);
+      let bandDiv = document.createElement("div");
+      bandDiv.classList.add("band");
+
       let artistDiv = document.createElement("p");
       artistDiv.classList.add("artist");
       artistDiv.innerText = i.artistName;
-      siteDiv.appendChild(artistDiv);
+      bandDiv.appendChild(artistDiv);
       console.log(i.artistName);
 
       let albumDiv = document.createElement("div");
+      albumDiv.classList.add("album");
       albumDiv.innerText = i.collectionName;
-      siteDiv.appendChild(albumDiv);
+      bandDiv.appendChild(albumDiv);
 
       let trackDiv = document.createElement("div");
-      siteDiv.appendChild(trackDiv);
+      bandDiv.appendChild(trackDiv);
 
       let previewDiv = document.createElement("a");
       previewDiv.href = `${i.trackViewUrl}`;
       previewDiv.innerText = i.trackName;
-      siteDiv.appendChild(previewDiv);
+      bandDiv.appendChild(previewDiv);
 
       let imageEl = document.createElement("img");
       imageEl.src = i.artworkUrl60;
-      siteDiv.appendChild(imageEl);
+      bandDiv.appendChild(imageEl);
+      siteDiv.appendChild(bandDiv);
     }
   });

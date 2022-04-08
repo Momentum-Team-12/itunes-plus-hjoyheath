@@ -5,8 +5,23 @@ h1 {
 #album {
     font-family: Verdana, Tahoma, sans-serif;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
-    position:relative;
+    /* position:relative; */
 }
 
+div {
+    margin: 20px;
+    /* width: 10%; */
+
+}
+
+.band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    border: 5px solid black;
+    
+}
