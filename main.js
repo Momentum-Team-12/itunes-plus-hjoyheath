@@ -28,6 +28,7 @@ fetch("https://itunes.apple.com/search?term=TOOL&media=music", {
       bandDiv.appendChild(albumDiv);
 
       let trackDiv = document.createElement("div");
+      trackDiv.classList.add("track");
       bandDiv.appendChild(trackDiv);
 
       let previewDiv = document.createElement("a");
@@ -36,8 +37,10 @@ fetch("https://itunes.apple.com/search?term=TOOL&media=music", {
       bandDiv.appendChild(previewDiv);
 
       let imageEl = document.createElement("img");
-      imageEl.src = i.artworkUrl60;
+      imageEl.src = i.artworkUrl100;
+      imageEl.classList.add("art");
       bandDiv.appendChild(imageEl);
+
       siteDiv.appendChild(bandDiv);
     }
   });
