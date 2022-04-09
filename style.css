@@ -53,12 +53,12 @@ form {
 .band {
     display: flex;
     flex: 1 1 auto;
-    width: 150px;
     flex-direction: column;
     align-items: center;
     border: 5px solid black;
     width: 10rem;
     justify-content: center;
+    text-align: center;
 }
 .art {
 margin: 20px;
