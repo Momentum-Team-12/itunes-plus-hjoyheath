@@ -11,6 +11,19 @@ body, html {
     background-size: cover;
     position: relative;
 }
+
+form {
+    display: flex;
+    justify-content: center;
+    
+
+}
+
+#artistsearch {
+    font: 1em erdana, Tahoma, sans-serif;
+}
+
+
 h1 {
     font-family: Verdana, Tahoma, sans-serif;
     color:aliceblue;
