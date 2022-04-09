@@ -8,11 +8,10 @@ div {
 }
 
 .image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/pexels-mobile-photography®-8482798.jpg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/8482798/pexels-photo-8482798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     height: 25%;
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -23,6 +22,7 @@ h1 {
     text-align: center;
     position: absolute;
     padding-top: 1em;
+    font-size: 75px;
     
 }
 
