@@ -34,7 +34,7 @@ form {
 }
 
 #artistsearch {
-    font: 1em Verdana, Tahoma, sans-serif;
+    font: 2em Verdana, Tahoma, sans-serif;
 }
 
 
@@ -44,9 +44,6 @@ form {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    
-    
-    
 }
 
 
@@ -55,15 +52,17 @@ form {
     flex: 1 1 auto;
     flex-direction: column;
     align-items: center;
-    border: 5px solid black;
     width: 10rem;
     justify-content: center;
     text-align: center;
 }
 .art {
-margin: 20px;
+margin: 10px;
 width: 100%;
 
 }
 
+.track {
+    margin: 0;
+}
 

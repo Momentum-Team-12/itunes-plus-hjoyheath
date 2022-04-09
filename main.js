@@ -16,11 +16,16 @@ fetch("https://proxy-itunes-api.glitch.me/search?term=TOOL&media=music", {
       let bandDiv = document.createElement("div");
       bandDiv.classList.add("band");
 
-      let artistDiv = document.createElement("p");
+      let artistDiv = document.createElement("div");
       artistDiv.classList.add("artist");
       artistDiv.innerText = i.artistName;
       bandDiv.appendChild(artistDiv);
       console.log(i.artistName);
+
+      let imageEl = document.createElement("img");
+      imageEl.src = i.artworkUrl100;
+      imageEl.classList.add("art");
+      bandDiv.appendChild(imageEl);
 
       let albumDiv = document.createElement("div");
       albumDiv.classList.add("album");
@@ -35,11 +40,6 @@ fetch("https://proxy-itunes-api.glitch.me/search?term=TOOL&media=music", {
       previewDiv.href = `${i.trackViewUrl}`;
       previewDiv.innerText = i.trackName;
       bandDiv.appendChild(previewDiv);
-
-      let imageEl = document.createElement("img");
-      imageEl.src = i.artworkUrl100;
-      imageEl.classList.add("art");
-      bandDiv.appendChild(imageEl);
 
       siteDiv.appendChild(bandDiv);
     }
