@@ -2,6 +2,11 @@ body, html {
     height: 100%;
     background-color: bisque;
 }
+div {
+    margin: 5%;
+    
+}
+
 .image {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/pexels-mobile-photography®-8482798.jpg");
     background-repeat: no-repeat;
@@ -12,18 +17,6 @@ body, html {
     position: relative;
 }
 
-form {
-    display: flex;
-    justify-content: center;
-    
-
-}
-
-#artistsearch {
-    font: 1em erdana, Tahoma, sans-serif;
-}
-
-
 h1 {
     font-family: Verdana, Tahoma, sans-serif;
     color:aliceblue;
@@ -32,6 +25,18 @@ h1 {
     padding-top: 1em;
     
 }
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+#artistsearch {
+    font: 1em Verdana, Tahoma, sans-serif;
+}
+
 
 #album {
     font-family: Verdana, Tahoma, sans-serif;
@@ -44,19 +49,21 @@ h1 {
     
 }
 
-div {
-    margin: 5%;
-}
 
 .band {
     display: flex;
     flex: 1 1 auto;
+    width: 150px;
     flex-direction: column;
     align-items: center;
     border: 5px solid black;
     width: 10rem;
+    justify-content: center;
 }
 .art {
 margin: 20px;
+width: 100%;
 
 }
+
+

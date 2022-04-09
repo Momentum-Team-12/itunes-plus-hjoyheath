@@ -1,6 +1,6 @@
 let siteDiv = document.querySelector("#album");
 
-fetch("https://itunes.apple.com/search?term=TOOL&media=music", {
+fetch("https://proxy-itunes-api.glitch.me/search?term=TOOL&media=music", {
   method: "GET",
   headers: {},
 })
