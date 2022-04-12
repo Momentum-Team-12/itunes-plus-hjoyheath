@@ -25,16 +25,6 @@ div {
     position: relative;
 }
 
-h1 {
-    font-family: Verdana, Tahoma, sans-serif;
-    color:aliceblue;
-    text-align: center;
-    position: absolute;
-    padding-top: 2em;
-    font-size: 50px;
-    
-}
-
 form {
     display: flex;
     justify-content: center;
@@ -47,6 +37,19 @@ form {
     font: 1.5em Verdana, Tahoma, sans-serif;
 }
 
+h1 {
+    font-family: Verdana, Tahoma, sans-serif;
+    color:aliceblue;
+    text-align: center;
+    position: relative;
+    padding-top: 2em;
+    font-size: 2rem;
+    
+}
+
+#previewMusic {
+    padding: 20px;
+}
 
 #album {
     font-family: Verdana, Tahoma, sans-serif;
@@ -75,4 +78,6 @@ width: 100%;
 .track {
     margin: 0;
 }
+
+
 
