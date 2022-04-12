@@ -6,6 +6,7 @@ function removeAllChildNodes(parent) {
   }
 }
 
+// const resultsDiv = document.querySelector("#results");
 const siteDiv = document.querySelector("#album");
 // defining variable and connecting to html
 const form = document.querySelector("#search");
@@ -33,6 +34,15 @@ form.addEventListener("submit", function (event) {
     })
     .then(function (data) {
       console.log(data);
+
+      if (data.resultCount === 0) {
+        console.log("no results");
+        let noResultsDiv = document.createElement("div");
+        noResultsDiv.innerText = "No results";
+        noResultsDiv.classList.add("no-results");
+        siteDiv.appendChild(noResultsDiv);
+        return;
+      }
 
       for (let i of data.results) {
         console.log(i);
@@ -71,5 +81,8 @@ form.addEventListener("submit", function (event) {
 
         siteDiv.appendChild(bandDiv);
       }
+    })
+    .catch((err) => {
+      console.log(err);
     });
 });
