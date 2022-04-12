@@ -10,13 +10,15 @@
 <body>
   <header class="image">
   <h1>Music to keep you going</h1>
-  <form action="search" method="post">
-    <input type="text" id="artistsearch" name="inputBox" placeholder="Search for Artist" required size="50">
-    <span>
+  <form id="search" action="search" method="post">
+    <label><input type="text" id="artistsearch" name="inputBox" placeholder="Search for Artist" required size="50" value=""></label>
+    <button>
       <input id="artistsearch" type="submit" value="Search">
-    </span>
+    </button>
 </form>
+<hr>
 </header>
+  <audio controls id="previewMusic" src=""></audio> 
   <div id="album"></div> 
 </body>
 </html>
