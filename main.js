@@ -39,8 +39,8 @@ form.addEventListener("submit", function (event) {
       if (data.resultCount === 0) {
         console.log("no results");
         let noResultsDiv = document.createElement("div");
-        noResultsDiv.innerText = "No results";
-        noResultsDiv.classList.add("no-results");
+        noResultsDiv.innerText = "No results found. Please try again.";
+        noResultsDiv.classList.add("noResults");
         siteDiv.appendChild(noResultsDiv);
         return;
       }
@@ -86,6 +86,12 @@ form.addEventListener("submit", function (event) {
       }
     })
     .catch((err) => {
-      console.log(err);
+      console.log("error here");
+      let errorDiv = document.createElement("div");
+      errorDiv.innerText =
+        "Ooops, something went wrong. Please try again later.";
+      errorDiv.classList.add("errorMessage");
+      siteDiv.appendChild(errorDiv);
+      return;
     });
 });

@@ -1,7 +1,12 @@
 body, html {
     height: 100%;
     background-color: bisque;
-    
+    font-family: 'Lato', sans-serif, 'Shadows Into Light', "cursive";;
+    margin:0;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 header {
@@ -16,42 +21,42 @@ div {
     
 }
 
-.image {
+.hero {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/8482798/pexels-photo-8482798.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     height: 25%;
     background-position: center;
     background-size: cover;
     position: relative;
+    width: 100%;
 }
 
 form {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    /* z-index: 2; */
     
 }
 
 button {
-    font: 1em  'Lato', sans-serif, 'Shadows Into Light', "cursive";
-    padding: 2px;
+    font-size: 1em;
     border-radius: 7em;
-    background-color: rgb(182, 159, 203);
     cursor: pointer;
+    max-width: 100px;
+    text-align: center;
 }
 
 #artistsearch {
     display: flex;
     flex-wrap: wrap;
     border-radius: 7em;
-    font: 1em  'Lato', sans-serif, 'Shadows Into Light', "cursive";
+    font-size: 1em;  
     padding: .5em;
-
+    
 }
 
 h1 {
-    font-family: 'Lato', sans-serif, 'Shadows Into Light', "cursive";
     color:aliceblue;
     text-align: center;
     position: relative;
@@ -70,7 +75,6 @@ h1 {
 }
 
 #album {
-    font-family: Verdana, Tahoma, sans-serif;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -90,6 +94,7 @@ h1 {
 .art {
 margin: 10px;
 width: 100%;
+border-radius: .25rem;
 
 }
 
@@ -97,9 +102,33 @@ width: 100%;
     margin: 0;
     border-radius: 20em;
     background-color: rgb(182, 159, 203);
-    padding:4px;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: white;
 
 }
+.errorMessage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    color: red;
+    font-size: x-large;
+    background-color: rgb(249, 155, 155);
+    border-radius: 7em;
+    
+}
 
-
+.noResults {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    color: rgb(4, 3, 0);
+    font-size: x-large;
+    background-color: rgb(241, 220, 84);
+    border-radius: 7em;
+}
 
