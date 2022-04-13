@@ -1,4 +1,5 @@
 console.log("hello");
+// removes songs that have already been searched, keeping search current.
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
@@ -10,7 +11,7 @@ function removeAllChildNodes(parent) {
 const siteDiv = document.querySelector("#album");
 // defining variable and connecting to html
 const form = document.querySelector("#search");
-const audioEl = document.querySelector("#previewMusic");
+const audioEl = document.querySelector("#previewMusic audio");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault();
@@ -34,7 +35,7 @@ form.addEventListener("submit", function (event) {
     })
     .then(function (data) {
       console.log(data);
-
+      //
       if (data.resultCount === 0) {
         console.log("no results");
         let noResultsDiv = document.createElement("div");
