@@ -47,6 +47,7 @@ form.addEventListener("submit", function (event) {
 
       for (let i of data.results) {
         console.log(i);
+
         let bandDiv = document.createElement("div");
         bandDiv.classList.add("band");
 
@@ -71,6 +72,7 @@ form.addEventListener("submit", function (event) {
         bandDiv.appendChild(trackDiv);
 
         let previewDiv = document.createElement("a");
+        previewDiv.classList.add("previewLink");
         previewDiv.href = `${i.trackViewUrl}`;
         previewDiv.innerText = i.trackName;
         previewDiv.addEventListener("click", (event) => {
