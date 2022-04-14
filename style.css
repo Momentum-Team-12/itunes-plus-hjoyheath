@@ -31,13 +31,6 @@ div {
     width: 100%;
 }
 
-form {
-    /* display: flex; */
-    justify-content: center;
-    align-items: center;
-    /* z-index: 2; */
-    
-}
 
 button {
     font-size: 1em;
@@ -45,6 +38,11 @@ button {
     cursor: pointer;
     max-width: 100px;
     text-align: center;
+    max-height: 3em;
+}
+
+button:hover {
+    background:rgb(215, 174, 220)
 }
 
 #artistsearch {
@@ -53,7 +51,14 @@ button {
     border-radius: 7em;
     font-size: 1em;  
     padding: .5em;
-    
+    cursor: pointer;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: black;
+}
+
+#artistsearch:hover {
+    background:rgb(231, 118, 106);
 }
 
 h1 {
@@ -66,13 +71,15 @@ h1 {
 }
 
 #previewMusic {
-    background-color: rgb(173, 203, 208);
+    background-color: rgb(215, 174, 220);
     display: flex;
     justify-content:center;
     align-items: center;
     padding: 20px;
     border-radius: 7em;
+
 }
+
 
 #album {
     display: flex;
@@ -90,6 +97,8 @@ h1 {
     width: 10rem;
     justify-content: center;
     text-align: center;
+    letter-spacing: .2em;
+    text-shadow: .1em black;
 }
 .art {
 margin: 10px;
@@ -101,11 +110,14 @@ border-radius: .25rem;
 .previewLink {
     margin: 0;
     border-radius: 20em;
-    background-color: rgb(182, 159, 203);
+    background-color: rgb(215, 174, 220);
     padding: 1rem 2rem;
     text-decoration: none;
-    color: white;
+    color: black;
+}
 
+.previewLink:hover {
+    background:rgb(231, 118, 106)
 }
 .errorMessage {
     display: flex;
@@ -115,8 +127,9 @@ border-radius: .25rem;
     width: 100%;
     color: red;
     font-size: x-large;
-    background-color: rgb(249, 155, 155);
+    background-color: rgb(224, 141, 132);
     border-radius: 7em;
+    letter-spacing: .1em;
     
 }
 
@@ -128,7 +141,8 @@ border-radius: .25rem;
     width: 100%;
     color: rgb(4, 3, 0);
     font-size: x-large;
-    background-color: rgb(241, 220, 84);
+    background-color: rgb(253, 182, 73);
     border-radius: 7em;
+    letter-spacing: .2em;
 }
 

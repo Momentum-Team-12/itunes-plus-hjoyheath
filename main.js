@@ -68,7 +68,6 @@ form.addEventListener("submit", function (event) {
         bandDiv.appendChild(albumDiv);
 
         let trackDiv = document.createElement("div");
-        trackDiv.classList.add("track");
         bandDiv.appendChild(trackDiv);
 
         let previewDiv = document.createElement("a");
@@ -85,6 +84,7 @@ form.addEventListener("submit", function (event) {
         siteDiv.appendChild(bandDiv);
       }
     })
+    // attaches a callback when a promise is rejected
     .catch((err) => {
       console.log("error here");
       let errorDiv = document.createElement("div");
