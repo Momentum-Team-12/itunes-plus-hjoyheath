@@ -6,13 +6,12 @@ function removeAllChildNodes(parent) {
     // https://www.javascripttutorial.net/dom/manipulating/remove-all-child-nodes/
   }
 }
-
-// const resultsDiv = document.querySelector("#results");
 const siteDiv = document.querySelector("#album");
 // defining variable and connecting to html
 const form = document.querySelector("#search");
 const audioEl = document.querySelector("#previewMusic audio");
 
+// search submit button listener
 form.addEventListener("submit", function (event) {
   event.preventDefault();
 
@@ -35,7 +34,8 @@ form.addEventListener("submit", function (event) {
     })
     .then(function (data) {
       console.log(data);
-      //
+
+      // if search has no results return message to user.
       if (data.resultCount === 0) {
         console.log("no results");
         let noResultsDiv = document.createElement("div");
@@ -44,7 +44,7 @@ form.addEventListener("submit", function (event) {
         siteDiv.appendChild(noResultsDiv);
         return;
       }
-
+      // loop artist name, album, album art, and track
       for (let i of data.results) {
         console.log(i);
 
@@ -70,6 +70,7 @@ form.addEventListener("submit", function (event) {
         let trackDiv = document.createElement("div");
         bandDiv.appendChild(trackDiv);
 
+        // simple design by using name of song as audio button.
         let previewDiv = document.createElement("a");
         previewDiv.classList.add("previewLink");
         previewDiv.href = `${i.trackViewUrl}`;
@@ -79,8 +80,9 @@ form.addEventListener("submit", function (event) {
           audioEl.src = i.previewUrl;
           audioEl.play();
         });
-        bandDiv.appendChild(previewDiv);
 
+        bandDiv.appendChild(previewDiv);
+        // put div within div for styling
         siteDiv.appendChild(bandDiv);
       }
     })
